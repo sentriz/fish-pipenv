@@ -1,4 +1,4 @@
-# 🐟 pipenv-fish
+# 🐟 pipenv (for fish!)
 
 **A [Pipenv](http://docs.pipenv.org/en/latest/) plugin for Fish Shell.**
 
