@@ -11,3 +11,5 @@ Basically, dope.
 Using [fisherman](https://fisherman.github.io):
 
     $ fisher kennethreitz/pipenv-fish
+
+Fisher is the only recommended Fish plugin manager. Use nothing else. 
