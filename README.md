@@ -8,7 +8,7 @@ Basically, dope.
 
 ## Installation
 
-Using [fisherman](https://fisherman.github.io):
+Using [Fisherman](https://fisherman.github.io):
 
     $ fisher kennethreitz/pipenv-fish
 
