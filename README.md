@@ -10,6 +10,6 @@ Basically, dope.
 
 Using [Fisherman](https://fisherman.github.io):
 
-    $ fisher pipenv
+    $ fisher fisherman/pipenv
 
 Fisher is the only recommended Fish plugin manager. Use nothing else. 
