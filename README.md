@@ -1,6 +1,6 @@
 # 🐟 pipenv-fish
 
-A [Pipenv](http://docs.pipenv.org/en/latest/) plugin for Fish Shell. 
+**A [Pipenv](http://docs.pipenv.org/en/latest/) plugin for Fish Shell.**
 
 Automatically activates your Pipenv shell when you `cd` into a directory containing a Pipenv project. 
 
