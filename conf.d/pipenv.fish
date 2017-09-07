@@ -1,6 +1,9 @@
 # set the user installation path
 
 if command -s pipenv > /dev/null
+    
+    eval (env _PIPENV_COMPLETE=source-fish pipenv)
+    
     function __pipenv_shell_activate --on-variable PWD
         if status --is-command-substitution
             return
