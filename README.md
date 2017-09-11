@@ -12,4 +12,37 @@ Using [Fisherman](https://fisherman.github.io):
 
     $ fisher pipenv
 
-Fisher is the only recommended Fish plugin manager. Use nothing else. 
+Fisher is the only recommended Fish plugin manager. Use nothing else.
+
+## Potential Issues
+### Mac OS
+After installing pipenv, running the $ pipenv command may yield the following error
+`Install http://docs.pipenv.org/en/latest/ to use this plugin.`
+
+### Reason for the error
+The problem is that, the pipenv plugin rightly could not find the `pipenv` command. The situation with 
+fish shell is that it executes scripts in the `/Users/user/.config/fish/config.d` folder before 
+executing `config.fish` and the pipenv plugin creates a link in the config.d folder hence it is 
+executed before config.fish.
+
+Now depending on how you installed pipenv or how soon your `$PATH` is loaded you could be faced with the
+above error.
+
+### Solutions
+1. You could install pipenv with the command `$ pip3 install pipenv`. Pipenv will then be installed in
+    `/usr/local/bin`. On some systems the folder `/usr/local/bin` is added to $PATH by the system which
+    means that it will be available before fish goes fishing for scripts in `/Users/user/.config/fish/config.d`
+    
+2. Or you could create a file say 000-env.fish (or whatever you want to call it), and place it in 
+    `/Users/user/.config/fish/config.d`. In this file set the path to the folder where pipenv was installed. 
+    E.g if pipenv was installed via pipsi, then the command will be something like 
+    `set -x PATH /Users/user/.local/bin $PATH`
+    
+    If pipenv was installed via `$ pip install pipenv`, then note that pip (python2) now puts its executables
+    in `/usr/local/opt/python/libexec/bin`.
+    
+    The `000` preface is to ensure that, that script will be executed first before the others in config.d. You
+    have to prefix the file with `000` it is abitrary. Just give it a name that places it at the to of the
+    pile.
+    
+ See [https://github.com/fisherman/pipenv/issues/1](url)
