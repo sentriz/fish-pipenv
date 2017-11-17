@@ -11,7 +11,7 @@ if command -s pipenv > /dev/null
 
         if not test -n "$PIPENV_ACTIVE"
           if sh -c 'pipenv --venv &> /dev/null'
-            exec pipenv shell
+            pipenv shell
           end
         end
     end
