@@ -10,7 +10,7 @@ if command -s pipenv > /dev/null
         end
 
         if not test -n "$PIPENV_ACTIVE"
-          if sh -c 'pipenv --venv &> /dev/null'
+          if sh -c 'pipenv --venv >/dev/null 2>&1'
             exec pipenv shell
           end
         end
