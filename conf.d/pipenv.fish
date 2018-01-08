@@ -2,7 +2,7 @@
 
 if command -s pipenv > /dev/null
     
-    eval (env _PIPENV_COMPLETE=source-fish pipenv)
+    complete --command pipenv --arguments "(env _PIPENV_COMPLETE=complete-fish COMMANDLINE=(commandline -cp) pipenv)" -f
     
     function __pipenv_shell_activate --on-variable PWD
         if status --is-command-substitution
