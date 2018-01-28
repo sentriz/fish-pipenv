@@ -42,7 +42,7 @@ above error.
     in `/usr/local/opt/python/libexec/bin`.
     
     The `000` preface is to ensure that, that script will be executed first before the others in config.d. You
-    have to prefix the file with `000` it is abitrary. Just give it a name that places it at the to of the
+    don't have to prefix the file with `000` it is abitrary. Just give it a name that places it at the to of the
     pile.
     
  See [https://github.com/fisherman/pipenv/issues/1](url)
