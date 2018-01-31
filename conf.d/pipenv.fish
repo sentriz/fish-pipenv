@@ -9,12 +9,22 @@ if command -s pipenv > /dev/null
             return
         end
         if not test -e "$PWD/Pipfile"
+            if not string match -q "$__pipenv_fish_initial_pwd"/'*' "$PWD/"
+                set -U __pipenv_fish_final_pwd "$PWD"
+                exit
+            end
             return
         end
 
         if not test -n "$PIPENV_ACTIVE"
           if sh -c 'pipenv --venv >/dev/null 2>&1'
+            set -x __pipenv_fish_initial_pwd "$PWD"
             pipenv shell
+            set -e __pipenv_fish_initial_pwd
+            if not test -n "$__pipenv_fish_final_pwd"
+                cd "$__pipenv_fish_final_pwd"
+                set -e __pipenv_fish_final_pwd
+            end
           end
         end
     end
