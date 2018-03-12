@@ -21,7 +21,7 @@ if command -s pipenv > /dev/null
             set -x __pipenv_fish_initial_pwd "$PWD"
             pipenv shell
             set -e __pipenv_fish_initial_pwd
-            if not test -n "$__pipenv_fish_final_pwd"
+            if test -n "$__pipenv_fish_final_pwd"
                 cd "$__pipenv_fish_final_pwd"
                 set -e __pipenv_fish_final_pwd
             end
