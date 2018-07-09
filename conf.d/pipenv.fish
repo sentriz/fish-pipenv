@@ -19,7 +19,13 @@ if command -s pipenv > /dev/null
         if not test -n "$PIPENV_ACTIVE"
           if pipenv --venv >/dev/null 2>&1
             set -x __pipenv_fish_initial_pwd "$PWD"
-            pipenv shell
+
+            if [ "$pipenv_fish_fancy" = 'yes' ]
+                set -- __pipenv_fish_arguments $__pipenv_fish_arguments --fancy
+            end
+
+            pipenv shell $__pipenv_fish_arguments
+
             set -e __pipenv_fish_initial_pwd
             if test -n "$__pipenv_fish_final_pwd"
                 cd "$__pipenv_fish_final_pwd"

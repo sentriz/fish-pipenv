@@ -14,6 +14,13 @@ Using [Fisherman](https://fisherman.github.io):
 
 Fisher is the only recommended Fish plugin manager. Use nothing else.
 
+## Fancy
+If your terminal supports `pipenv shell --fancy`, set the following environment variable in your `~/.config/fish/config.fish`:
+
+```fish
+set pipenv_fish_fancy yes
+```
+
 ## Potential Issues
 ### Mac OS
 After installing pipenv, running the $ pipenv command may yield the following error
