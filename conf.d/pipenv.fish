@@ -29,8 +29,8 @@ if command -s pipenv > /dev/null
         end
     end
 else
-    function pipenv -d "http://docs.pipenv.org/en/latest/"
-        echo "Install http://docs.pipenv.org/en/latest/ to use this plugin." > /dev/stderr
+    function pipenv -d "https://pipenv.readthedocs.io/en/latest/"
+        echo "Install https://pipenv.readthedocs.io/en/latest/ to use this plugin." > /dev/stderr
         return 1
     end
 end
