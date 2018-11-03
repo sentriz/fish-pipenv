@@ -1,6 +1,6 @@
 # 🐟 pipenv (for fish!)
 
-**A [Pipenv](http://docs.pipenv.org/en/latest/) plugin for Fish Shell.**
+**A [Pipenv](http://docs.pipenv.org/en/latest/) package for Fish Shell.**
 
 Automatically activates your Pipenv shell when you `cd` into a directory containing a Pipenv project. 
 
@@ -8,21 +8,21 @@ Basically, dope.
 
 ## Installation
 
-Using [Fisherman](https://fisherman.github.io):
+Using [Fisher](docs: update installation instructions):
 
-    $ fisher pipenv
+    $ fisher add kennethreitz/fish-pipenv
 
-Fisher is the only recommended Fish plugin manager. Use nothing else.
+Fisher is the only recommended Fish package manager. Use nothing else.
 
 ## Potential Issues
 ### Mac OS
 After installing pipenv, running the $ pipenv command may yield the following error
-`Install http://docs.pipenv.org/en/latest/ to use this plugin.`
+`Install http://docs.pipenv.org/en/latest/ to use this package.`
 
 ### Reason for the error
-The problem is that, the pipenv plugin rightly could not find the `pipenv` command. The situation with 
+The problem is that, the pipenv package rightly could not find the `pipenv` command. The situation with 
 fish shell is that it executes scripts in the `/Users/user/.config/fish/config.d` folder before 
-executing `config.fish` and the pipenv plugin creates a link in the config.d folder hence it is 
+executing `config.fish` and the pipenv package creates a link in the config.d folder hence it is 
 executed before config.fish.
 
 Now depending on how you installed pipenv or how soon your `$PATH` is loaded you could be faced with the
