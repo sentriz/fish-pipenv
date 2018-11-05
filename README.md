@@ -1,6 +1,6 @@
-# 🐟 pipenv (for fish!)
+# fish-pipenv
 
-**A [Pipenv](http://docs.pipenv.org/en/latest/) package for Fish Shell.**
+**[Pipenv](http://docs.pipenv.org/en/latest/) for the [fish-shell](https://github.com/fish-shell/fish-shell).**
 
 Automatically activates your Pipenv shell when you `cd` into a directory containing a Pipenv project. 
 
@@ -8,7 +8,7 @@ Basically, dope.
 
 ## Installation
 
-Using [Fisher](docs: update installation instructions):
+Using [Fisher](https://github.com/jorgebucaran/fisher):
 
     $ fisher add kennethreitz/fish-pipenv
 
