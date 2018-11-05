@@ -12,8 +12,6 @@ Using [Fisher](https://github.com/jorgebucaran/fisher):
 
     $ fisher add kennethreitz/fish-pipenv
 
-Fisher is the only recommended Fish package manager. Use nothing else.
-
 ## Potential Issues
 ### Mac OS
 After installing pipenv, running the $ pipenv command may yield the following error
