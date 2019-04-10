@@ -58,4 +58,4 @@ above error.
     set -U fish_user_paths ~/.pyenv/shims $fish_user_paths
     ```
     
- See [https://github.com/fisherman/pipenv/issues/1](url)
+ See [https://github.com/kennethreitz/fish-pipenv/issues/1](url)
