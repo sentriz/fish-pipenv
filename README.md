@@ -49,5 +49,13 @@ above error.
     The `000` preface is to ensure that, that script will be executed first before the others in config.d. You
     don't have to prefix the file with `000` it is abitrary. Just give it a name that places it at the to of the
     pile.
+
+3. Or assuming you also have [fish-pyenv](https://github.com/daenney/pyenv) you can add a universal variable to
+    your `fish_user_paths` following
+    [mhugbin](https://github.com/kennethreitz/fish-pipenv/issues/1#issuecomment-385206132):
+
+    ```fish
+    set -U fish_user_paths ~/.pyenv/shims $fish_user_paths
+    ```
     
  See [https://github.com/fisherman/pipenv/issues/1](url)
