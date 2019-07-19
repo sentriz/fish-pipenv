@@ -6,6 +6,8 @@ Automatically activates your Pipenv shell when you `cd` into a directory contain
 
 Basically, dope. 
 
+Note: this project was previously maintained by @kennethreitz
+
 ## Installation
 
 Using [Fisher](https://github.com/jorgebucaran/fisher):
