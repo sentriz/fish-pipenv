@@ -12,7 +12,11 @@ Note: this project was previously maintained by @kennethreitz
 
 Using [Fisher](https://github.com/jorgebucaran/fisher):
 
-    $ fisher add kennethreitz/fish-pipenv
+    $ fisher add sentriz/fish-pipenv
+    
+Using [Oh my Fish](https://github.com/oh-my-fish/oh-my-fish)
+
+    $ omf install https://github.com/sentriz/fish-pipenv
 
 ## Fancy
 If your terminal supports `pipenv shell --fancy`, set the following environment variable in your `~/.config/fish/config.fish`:
