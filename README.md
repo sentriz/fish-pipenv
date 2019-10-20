@@ -1,33 +1,29 @@
-# fish-pipenv
+![](https://i.imgur.com/kxRuCqN.png)
 
-**[Pipenv](http://docs.pipenv.org/en/latest/) for the [fish-shell](https://github.com/fish-shell/fish-shell).**
+<p style="max-width: 75%;">hooks into a change in <code>PWD</code> to automatically launch a <a href="http://docs.pipenv.org/en/latest/">Pipenv</a> shell for your Pipenv project 
 
-Automatically activates your Pipenv shell when you `cd` into a directory containing a Pipenv project. 
-
-Basically, dope. 
-
-Note: this project was previously maintained by @kennethreitz
+<p align="right" style="margin-left: auto; max-width: 75%; font-size: 14px; color: #eee;"><i>note:</i> this project was previously maintained by <a href="https://github.com/kennethreitz/">@kennethreitz</a></p>
 
 ## Installation
 
-Using [Fisher](https://github.com/jorgebucaran/fisher):
 
-    $ fisher add sentriz/fish-pipenv
-    
-Using [Oh my Fish](https://github.com/oh-my-fish/oh-my-fish)
+|manager|command|
+|---|---|
+|[fundle](https://github.com/danhper/fundle)|`fundle plugin 'sentriz/fish-pipenv'`|
+|[fisher](https://github.com/jorgebucaran/fisher)|`fisher add 'sentriz/fish-pipenv'`|
+|[oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)|`omf install 'https://github.com/sentriz/fish-pipenv'`|
 
-    $ omf install https://github.com/sentriz/fish-pipenv
-
-## Fancy
-If your terminal supports `pipenv shell --fancy`, set the following environment variable in your `~/.config/fish/config.fish`:
+## Configuration options
+Suitable for your `~/.config/fish/config.fish`  
 
 ```fish
-set pipenv_fish_fancy yes
+# set if your term supports `pipenv shell --fancy`
+set pipenv_fish_fancy yes 
 ```
 
 ## Potential Issues
 ### Mac OS
-After installing pipenv, running the $ pipenv command may yield the following error
+After installing pipenv, running the `$ pipenv` command may yield the following error:  
 `Install http://docs.pipenv.org/en/latest/ to use this package.`
 
 ### Reason for the error
@@ -64,4 +60,4 @@ above error.
     set -U fish_user_paths ~/.pyenv/shims $fish_user_paths
     ```
     
-See https://github.com/kennethreitz/fish-pipenv/issues/1
+See https://github.com/sentriz/fish-pipenv/issues/1
