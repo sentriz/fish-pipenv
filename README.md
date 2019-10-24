@@ -1,4 +1,4 @@
-![](https://i.imgur.com/kxRuCqN.png)
+![](https://i.imgur.com/BALScDM.png)
 
 <p style="max-width: 75%;">hooks into a change in <code>PWD</code> to automatically launch a <a href="http://docs.pipenv.org/en/latest/">Pipenv</a> shell for your Pipenv project 
 
