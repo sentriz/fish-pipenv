@@ -17,7 +17,7 @@ fisher install sentriz/fish-pipenv
 Add:
 
 ```fish
-fundle plugin "danhper/fish-ssh-agent"
+fundle plugin "sentriz/fish-pipenv"
 ```
 
 to your `config.fish` (create one if it doesn't exist), reload your shell and run:
