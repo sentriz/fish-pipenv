@@ -15,7 +15,8 @@ function __pipenv_shell_activate --on-variable PWD
     end
 
     if not test -n "$PIPENV_ACTIVE"
-        if test status current-command = "cd" or test status current-command = "__pipenv_shell_activate"
+        set curcmd (status current-command)
+        if [ "$curcmd" = 'cd' -a "$curcmd" = "__pipenv_shell_activate" ]
             if pipenv --venv >/dev/null 2>&1
             set -x __pipenv_fish_initial_pwd "$PWD"
 
