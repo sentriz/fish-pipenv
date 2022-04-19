@@ -15,25 +15,25 @@ function __pipenv_shell_activate --on-variable PWD
     end
 
     if not test -n "$PIPENV_ACTIVE"
-        set curcmd (status current-command)
-        if [ "$curcmd" = 'cd' -a "$curcmd" = "__pipenv_shell_activate" ]
-            if pipenv --venv >/dev/null 2>&1
+        if pipenv --venv >/dev/null 2>&1
             set -x __pipenv_fish_initial_pwd "$PWD"
 
             if [ "$pipenv_fish_fancy" = 'yes' ]
                 set -- __pipenv_fish_arguments $__pipenv_fish_arguments --fancy
             end
 
-            pipenv shell $__pipenv_fish_arguments
+            set curcmd (status current-command)
+            if [ "$curcmd" = 'cd' -o "$curcmd" = "__pipenv_shell_activate" ]
+                pipenv shell $__pipenv_fish_arguments
+            else
+                . $(pipenv --venv)/bin/activate.fish
+            end
 
             set -e __pipenv_fish_initial_pwd
             if test -n "$__pipenv_fish_final_pwd"
                 cd "$__pipenv_fish_final_pwd"
                 set -e __pipenv_fish_final_pwd
             end
-            end
-        else
-            . $(pipenv --venv)/bin/activate.fish
         end
     end
 end
