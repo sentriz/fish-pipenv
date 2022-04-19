@@ -9,7 +9,7 @@ function __pipenv_shell_activate --on-variable PWD
     if not test -e "$PWD/Pipfile"
         if not string match -q "$__pipenv_fish_initial_pwd"/'*' "$PWD/"
             set -U __pipenv_fish_final_pwd "$PWD"
-            exit
+            deactivate or exit
         end
         return
     end
